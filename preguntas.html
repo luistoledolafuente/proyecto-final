@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Web de Películas</title>
+    <link rel="stylesheet" href="./css/preguntas.css">
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Preguntas Frecuentes</h1>
+
+        <!-- Campo de búsqueda -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar una pregunta...">
+        </div>
+
+        <!-- Preguntas frecuentes -->
+        <div class="faq-item">
+            <h2>¿Cómo puedo registrarme en la web?</h2>
+            <p>Para registrarte, haz clic en el botón "Registrarse" en la esquina superior derecha de la página de inicio y sigue las instrucciones.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Es gratis ver las películas?</h2>
+            <p>Ofrecemos tanto contenido gratuito como contenido premium que requiere una suscripción.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Puedo descargar las películas?</h2>
+            <p>No, actualmente no permitimos la descarga de películas. Sin embargo, puedes verlas en streaming en cualquier momento.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Qué dispositivos son compatibles?</h2>
+            <p>Nuestra web es compatible con computadoras, tablets y smartphones. Recomendamos utilizar navegadores actualizados para la mejor experiencia.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Cómo puedo contactar con el soporte técnico?</h2>
+            <p>Puedes contactar con el soporte técnico a través del formulario de contacto disponible en la sección "Ayuda" o enviando un correo a soporte@webdepeliculas.com.</p>
+        </div>
+    </div>
+
+    <script>
+        // Script para el buscador
+        const searchInput = document.getElementById('searchInput');
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('h2').textContent.trim().toLowerCase();
+                const content = item.querySelector('p');
+
+                if (question.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    content.style.display = item.classList.contains('active') ? 'block' : 'none';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Script para expandir/reducir respuestas
+        document.querySelectorAll('.faq-item h2').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const content = item.nextElementSibling;
+                if (item.classList.contains('active')) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

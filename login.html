@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form Design One | NEX.NET</title>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>NEX.NET</h1>
+      <form id="loginForm">
+        <label for="username">Nombre:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Ingrese Su Nombre"
+          required
+        />
+        <span class="error-message" id="usernameError"></span>
+
+        <label for="password">Apellido:</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="Ingrese su Apellido"
+          required
+        />
+        <span class="error-message" id="passwordError"></span>
+
+        <label for="dni">DNI:</label>
+        <input
+          type="text"
+          id="dni"
+          name="dni"
+          placeholder="Ingresar su DNI (8 caracteres numéricos)"
+          minlength="8"
+          maxlength="8"
+          required
+        />
+        <span class="error-message" id="dniError"></span>
+
+        <label for="email">Correo electrónico:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Ingresar correo electrónico"
+          required
+        />
+        <span class="error-message" id="emailError"></span>
+
+        <button type="submit">Ingresar</button>
+
+        <a href="#" class="forgot-email-link"
+          >¿Olvidaste tu correo electrónico?</a
+        ><br />
+      </form>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

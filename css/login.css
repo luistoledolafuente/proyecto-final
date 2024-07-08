@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #131212;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    background: url(https://wallpapers.com/images/hd/optimus-prime-face-ddrrx8do9x58s2u7.jpg)
+      no-repeat center top;
+    background-size: cover;
+  }
+  
+  .login-box {
+    background-color: #000000; /* Fondo negro para toda la caja de login */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(22, 22, 22, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 0 auto; /* Centrar horizontalmente */
+    border: 2px solid #f8f5f5; /* Borde blanco de 2px */
+    margin-left: 200px;
+  }
+  
+  .login-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left; /* Alinear a la izquierda */
+    color: #fff; /* Color de texto blanco para el título */
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear a la izquierda */
+  }
+  
+  .login-box label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #fff; /* Color de texto blanco para las etiquetas */
+    padding-bottom: 5px; /* Espacio para separar el borde de la etiqueta del campo de entrada */
+  }
+  
+  .login-box input,
+  .login-box textarea,
+  .login-box button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff; /* Borde blanco para los campos de entrada */
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%; /* Ancho completo */
+    background-color: #080808; /* Color de fondo gris oscuro */
+    color: #fff; /* Color de texto blanco */
+  }
+  
+  .error-message {
+    color: #e74c3c; /* Color rojo para mensajes de error */
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+  }
+  
+  /* Estilos para el botón de ingresar */
+  button[type="submit"] {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  }
+  
+  /* Estilo hover para el botón */
+  button[type="submit"]:hover {
+    background-color: #c0392b; /* Rojo oscuro al pasar el mouse */
+  }
+  
+  /* Estilo para el enlace '¿Olvidaste tu correo electrónico?' */
+  .login-box a {
+    color: #fff; /* Color de texto blanco para el enlace */
+    text-decoration: none; /* Eliminar subrayado */
+  }
+  
+  /* Estilo hover para el enlace */
+  .login-box a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #fff; /* Mantener el color de texto blanco al pasar el mouse */
+  }
+  
+  /* Estilos responsivos */
+  
+  /* Para tablets y dispositivos menores a 768px */
+  @media (max-width: 768px) {
+    .login-box {
+      width: 80%; /* Ajustar ancho a 80% de la pantalla */
+      margin-left: 5%; /* Ajustar margen izquierdo */
+      margin-right: 5%; /* Ajustar margen derecho */
+    }
+  
+    .login-box h1 {
+      font-size: 20px; /* Reducir tamaño de la fuente */
+    }
+  
+    .login-box input,
+    .login-box textarea,
+    .login-box button {
+      font-size: 14px; /* Reducir tamaño de la fuente */
+    }
+  }
+  
+  /* Para dispositivos móviles menores a 480px */
+  @media (max-width: 480px) {
+    .login-box {
+      width: 90%; /* Ajustar ancho a 90% de la pantalla */
+      padding: 15px; /* Reducir padding */
+      margin-left: 2.5%; /* Ajustar margen izquierdo */
+      margin-right: 2.5%; /* Ajustar margen derecho */
+    }
+  
+    .login-box h1 {
+      font-size: 18px; /* Reducir tamaño de la fuente */
+    }
+  
+    .login-box input,
+    .login-box textarea,
+    .login-box button {
+      font-size: 12px; /* Reducir tamaño de la fuente */
+    }
+  }
